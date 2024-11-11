@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TM24 Forex All-in-One Calculator</title>
+    <link rel="stylesheet" href="new 1.css"> <!-- Make sure this is correct -->
+</head>
+<body>
+    <div class="container">
+        <h1>TM24 - Forex All-in-One Calculator</h1>
+        
+        <div class="calculator-selector">
+        <!-- Calculator Selector (No label, just dropdown) -->
+            <select id="calculator" onchange="showCalculator()">
+                <option value="position">Position Size Calculator</option>
+                <option value="riskReward">Risk-to-Reward Ratio Calculator</option>
+                <option value="stopLoss">Stop Loss/Take Profit Calculator</option>
+                <option value="pipValue">Pip Value Calculator</option>
+                <option value="margin">Margin Calculator</option>
+            </select>
+        </div>
+
+        <!-- Position Size Calculator -->
+        <div id="position" class="calculator">
+            <h2>Position Size Calculator</h2>
+            <input type="number" id="accountBalance" placeholder="Account Balance" />
+            <input type="number" id="riskPercentage" placeholder="Risk Percentage" />
+            <input type="number" id="stopLossPips" placeholder="Stop Loss (Pips)" />
+            <input type="number" id="pipValue" placeholder="Pip Value (in USD)" />
+            <button onclick="calculatePositionSize()">Calculate</button>
+            <p id="positionSizeResult"></p>
+        </div>
+
+        <!-- Risk-to-Reward Ratio Calculator -->
+        <div id="riskReward" class="calculator">
+            <h2>Risk-to-Reward Ratio Calculator</h2>
+            <input type="number" id="riskAmount" placeholder="Risk Amount (in USD)" />
+            <input type="number" id="rewardAmount" placeholder="Reward Amount (in USD)" />
+            <button onclick="calculateRiskReward()">Calculate</button>
+            <p id="riskRewardResult"></p>
+        </div>
+
+        <!-- Stop Loss/Take Profit Calculator -->
+        <div id="stopLoss" class="calculator">
+            <h2>Stop Loss/Take Profit Calculator</h2>
+            <input type="number" id="entryPrice" placeholder="Entry Price" />
+            <input type="number" id="stopLossPrice" placeholder="Stop Loss Price" />
+            <input type="number" id="takeProfitPrice" placeholder="Take Profit Price" />
+            <button onclick="calculateStopLossTakeProfit()">Calculate</button>
+            <p id="stopLossTakeProfitResult"></p>
+        </div>
+
+        <!-- Pip Value Calculator -->
+        <div id="pipValue" class="calculator">
+            <h2>Pip Value Calculator</h2>
+            <input type="number" id="currencyPairPrice" placeholder="Currency Pair Price (e.g., 1.1500)" />
+            <input type="number" id="positionSize" placeholder="Position Size" />
+            <button onclick="calculatePipValue()">Calculate</button>
+            <p id="pipValueResult"></p>
+        </div>
+
+        <!-- Margin Calculator -->
+        <div id="margin" class="calculator">
+            <h2>Margin Calculator</h2>
+            <input type="number" id="tradeSize" placeholder="Trade Size" />
+            <input type="number" id="leverage" placeholder="Leverage" />
+            <button onclick="calculateMargin()">Calculate</button>
+            <p id="marginResult"></p>
+        </div>
+		 <!-- Powered by TRADEMEET24 -->
+        <p class="powered-by">Powered by TRADEMEET24</p>
+   
+    </div>
+	
+
+    <script src="new 1.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

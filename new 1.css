@@ -1,0 +1,153 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px; /* Reduced max-width to avoid overfilling on smaller screens */
+    padding: 30px;
+    background: linear-gradient(135deg, #2e2e2e, #1a1a1a); /* Dark gradient background */
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px; /* Reduced font size */
+    color: #f1f1f1;
+    margin-bottom: 30px; /* Adjusted margin to give space */
+    font-weight: 700;
+}
+
+.calculator-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; /* Increased space between dropdown and calculators */
+}
+
+.calculator-selector select {
+    padding: 12px 20px;
+    font-size: 16px; /* Reduced font size */
+    background-color: #333;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 250px;
+}
+
+.calculator-selector select:hover {
+    background-color: #4e4e4e;
+}
+
+.calculator {
+    display: none;
+    margin-top: 20px;
+}
+
+.calculator h2 {
+    text-align: center;
+    font-size: 24px; /* Reduced font size */
+    margin-bottom: 20px;
+    color: #28a745; /* Green color for titles */
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #222;
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px; /* Reduced font size */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input:focus {
+    background-color: #333;
+    border-color: #28a745;
+    outline: none;
+}
+
+button {
+    padding: 12px 24px;
+    width: 100%;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px; /* Reduced font size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center; /* Ensures the text inside the button is centered horizontally */
+    display: flex; /* Flexbox to vertically align text */
+    justify-content: center; /* Aligns the text horizontally in the center */
+    align-items: center; /* Aligns the text vertically in the center */
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #1e7e34;
+}
+
+p {
+    font-size: 18px; /* Reduced font size */
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    color: #f1f1f1;
+}
+
+.calculator input,
+.calculator button {
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+/* Powered by TRADEMEET24 at the bottom */
+.powered-by {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin-top: 40px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px; /* Further reduced for smaller screens */
+    }
+
+    .calculator h2 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .calculator-selector select {
+        font-size: 14px;
+    }
+}
