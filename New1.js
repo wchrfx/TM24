@@ -1,99 +1,108 @@
-// Show/Hide calculators based on the dropdown selection
+// Toggle between the 'Sign Up' and 'Log In' form view
+function toggleForms() {
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    
+    if (loginForm.style.display === "none") {
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+    } else {
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+    }
+}
+
+// Show the selected calculator
 function showCalculator() {
     const selectedCalculator = document.getElementById('calculator').value;
     const calculators = document.querySelectorAll('.calculator');
-    
-    calculators.forEach(calculator => {
-        if (calculator.id === selectedCalculator) {
-            calculator.style.display = 'block';
-        } else {
-            calculator.style.display = 'none';
-        }
+
+    // Hide all calculators
+    calculators.forEach(calc => {
+        calc.style.display = "none";
     });
+
+    // Show the selected calculator
+    document.getElementById(selectedCalculator).style.display = "block";
 }
 
-// Position Size Calculator
+// Calculate Position Size
 function calculatePositionSize() {
     const accountBalance = parseFloat(document.getElementById('accountBalance').value);
     const riskPercentage = parseFloat(document.getElementById('riskPercentage').value);
     const stopLossPips = parseFloat(document.getElementById('stopLossPips').value);
     const pipValue = parseFloat(document.getElementById('pipValue').value);
 
-    if (!accountBalance || !riskPercentage || !stopLossPips || !pipValue) {
-        document.getElementById('positionSizeResult').innerText = 'Please fill all fields.';
+    if (isNaN(accountBalance) || isNaN(riskPercentage) || isNaN(stopLossPips) || isNaN(pipValue)) {
+        alert("Please fill in all fields.");
         return;
     }
 
-    const riskAmount = (accountBalance * (riskPercentage / 100));
-    const positionSize = riskAmount / (stopLossPips * pipValue);
-
-    document.getElementById('positionSizeResult').innerText = 'Position Size: ' + positionSize.toFixed(2);
+    const positionSize = (accountBalance * (riskPercentage / 100)) / (stopLossPips * pipValue);
+    document.getElementById('positionSizeResult').innerText = "Position Size: " + positionSize.toFixed(2);
 }
 
-// Risk-to-Reward Ratio Calculator
+// Calculate Risk-to-Reward Ratio
 function calculateRiskReward() {
     const riskAmount = parseFloat(document.getElementById('riskAmount').value);
     const rewardAmount = parseFloat(document.getElementById('rewardAmount').value);
 
-    if (!riskAmount || !rewardAmount) {
-        document.getElementById('riskRewardResult').innerText = 'Please fill both fields.';
+    if (isNaN(riskAmount) || isNaN(rewardAmount)) {
+        alert("Please fill in both fields.");
         return;
     }
 
-    const ratio = rewardAmount / riskAmount;
-
-    document.getElementById('riskRewardResult').innerText = 'Risk-to-Reward Ratio: ' + ratio.toFixed(2);
+    const riskReward = rewardAmount / riskAmount;
+    document.getElementById('riskRewardResult').innerText = "Risk-to-Reward Ratio: " + riskReward.toFixed(2);
 }
 
-// Stop Loss/Take Profit Calculator
+// Calculate Stop Loss and Take Profit
 function calculateStopLossTakeProfit() {
     const entryPrice = parseFloat(document.getElementById('entryPrice').value);
     const stopLossPrice = parseFloat(document.getElementById('stopLossPrice').value);
     const takeProfitPrice = parseFloat(document.getElementById('takeProfitPrice').value);
 
-    if (!entryPrice || !stopLossPrice || !takeProfitPrice) {
-        document.getElementById('stopLossTakeProfitResult').innerText = 'Please fill all fields.';
+    if (isNaN(entryPrice) || isNaN(stopLossPrice) || isNaN(takeProfitPrice)) {
+        alert("Please fill in all fields.");
         return;
     }
 
-    const stopLossPips = Math.abs(entryPrice - stopLossPrice);
-    const takeProfitPips = Math.abs(entryPrice - takeProfitPrice);
+    const stopLoss = (entryPrice - stopLossPrice).toFixed(2);
+    const takeProfit = (takeProfitPrice - entryPrice).toFixed(2);
 
-    document.getElementById('stopLossTakeProfitResult').innerText = 
-        'Stop Loss Pips: ' + stopLossPips.toFixed(2) + '\nTake Profit Pips: ' + takeProfitPips.toFixed(2);
+    document.getElementById('stopLossTakeProfitResult').innerText = "Stop Loss: " + stopLoss + " | Take Profit: " + takeProfit;
 }
 
-// Pip Value Calculator
+// Calculate Pip Value
 function calculatePipValue() {
     const currencyPairPrice = parseFloat(document.getElementById('currencyPairPrice').value);
     const positionSize = parseFloat(document.getElementById('positionSize').value);
 
-    if (!currencyPairPrice || !positionSize) {
-        document.getElementById('pipValueResult').innerText = 'Please fill both fields.';
+    if (isNaN(currencyPairPrice) || isNaN(positionSize)) {
+        alert("Please fill in both fields.");
         return;
     }
 
     const pipValue = (0.0001 / currencyPairPrice) * positionSize;
-
-    document.getElementById('pipValueResult').innerText = 'Pip Value: ' + pipValue.toFixed(2);
+    document.getElementById('pipValueResult').innerText = "Pip Value: $" + pipValue.toFixed(2);
 }
 
-// Margin Calculator
+// Calculate Margin
 function calculateMargin() {
     const tradeSize = parseFloat(document.getElementById('tradeSize').value);
     const leverage = parseFloat(document.getElementById('leverage').value);
 
-    if (!tradeSize || !leverage) {
-        document.getElementById('marginResult').innerText = 'Please fill both fields.';
+    if (isNaN(tradeSize) || isNaN(leverage)) {
+        alert("Please fill in both fields.");
         return;
     }
 
-    const marginRequired = tradeSize / leverage;
-
-    document.getElementById('marginResult').innerText = 'Margin Required: ' + marginRequired.toFixed(2);
+    const margin = tradeSize / leverage;
+    document.getElementById('marginResult').innerText = "Required Margin: $" + margin.toFixed(2);
 }
 
-// Initialize by hiding all calculators except the default one
+// Initialize default calculator
 window.onload = function() {
-    showCalculator();
+    // Automatically show the Position Size Calculator on page load
+    document.getElementById('position').style.display = 'block';
 };
