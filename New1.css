@@ -1,153 +1,274 @@
+/* Root color scheme */
+:root {
+    --primary-color: #1E90FF; /* Blue */
+    --secondary-color: #4CAF50; /* Green */
+    --background-color: #f4f4f4; /* Light gray */
+    --accent-color: #333; /* Dark text */
+    --highlight-color: #ff6600; /* Accent color for highlights */
+}
+
+/* Body and basic styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: white;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--accent-color);
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
 }
 
-.container {
-    width: 90%;
-    max-width: 1000px; /* Reduced max-width to avoid overfilling on smaller screens */
-    padding: 30px;
-    background: linear-gradient(135deg, #2e2e2e, #1a1a1a); /* Dark gradient background */
-    border-radius: 12px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-h1 {
-    text-align: center;
-    font-size: 28px; /* Reduced font size */
-    color: #f1f1f1;
-    margin-bottom: 30px; /* Adjusted margin to give space */
-    font-weight: 700;
-}
-
-.calculator-selector {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px; /* Increased space between dropdown and calculators */
-}
-
-.calculator-selector select {
-    padding: 12px 20px;
-    font-size: 16px; /* Reduced font size */
-    background-color: #333;
-    color: #fff;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    max-width: 250px;
-}
-
-.calculator-selector select:hover {
-    background-color: #4e4e4e;
-}
-
-.calculator {
-    display: none;
-    margin-top: 20px;
-}
-
-.calculator h2 {
-    text-align: center;
-    font-size: 24px; /* Reduced font size */
-    margin-bottom: 20px;
-    color: #28a745; /* Green color for titles */
-}
-
-input {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    background-color: #222;
-    border: 2px solid #333;
-    border-radius: 8px;
+/* Header */
+header {
+    background-color: var(--primary-color);
     color: white;
-    font-size: 14px; /* Reduced font size */
-    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center;
+    padding: 60px 20px;
 }
 
-input:focus {
-    background-color: #333;
-    border-color: #28a745;
-    outline: none;
+header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+header p {
+    font-size: 24px;
+    margin-top: 10px;
 }
 
 button {
-    padding: 12px 24px;
-    width: 100%;
-    background-color: #28a745;
-    border: none;
-    border-radius: 8px;
+    background-color: var(--secondary-color);
     color: white;
-    font-size: 16px; /* Reduced font size */
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    text-align: center; /* Ensures the text inside the button is centered horizontally */
-    display: flex; /* Flexbox to vertically align text */
-    justify-content: center; /* Aligns the text horizontally in the center */
-    align-items: center; /* Aligns the text vertically in the center */
-}
-
-button:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-}
-
-button:active {
-    background-color: #1e7e34;
-}
-
-p {
-    font-size: 18px; /* Reduced font size */
-    font-weight: 600;
-    text-align: center;
     margin-top: 20px;
-    color: #f1f1f1;
+    border-radius: 4px;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+}
+
+/* Introduction Section */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+/* Features Section */
+.features {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.features h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.feature-card h4 {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.feature-card p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Courses Section */
+.courses {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.courses h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.courses p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Login Form */
+.login {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.login h3 {
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+.login-form {
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Forex Calculator Section */
+.calculators {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculators h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Calculator Dropdown */
+.calculator-selector {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#calculator {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Individual Calculator Styles */
+.calculator {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculator h4 {
+    font-size: 28px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .calculator input,
 .calculator button {
-    max-width: 400px;
-    margin: 10px auto;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
 }
 
-/* Powered by TRADEMEET24 at the bottom */
-.powered-by {
+.calculator input {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.calculator button {
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.calculator button:hover {
+    background-color: #388E3C;
+}
+
+.calculator p {
+    font-size: 16px;
+    color: var(--accent-color);
     text-align: center;
-    font-size: 14px;
-    color: #888;
-    margin-top: 40px;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 24px; /* Further reduced for smaller screens */
-    }
-
-    .calculator h2 {
-        font-size: 22px;
-    }
-
-    button {
-        font-size: 14px;
-    }
-
-    .calculator-selector select {
-        font-size: 14px;
-    }
+/* Footer for Calculator */
+.calculators p {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: var(--accent-color);
 }
