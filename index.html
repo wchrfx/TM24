@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TM24 Forex All-in-One Calculator</title>
-    <link rel="stylesheet" href="New1.css"> <!-- Make sure this is correct -->
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tm24.space - Trading Community</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
-        <h1>TM24 - Forex All-in-One Calculator</h1>
-        
-        <div class="calculator-selector">
-        <!-- Calculator Selector (No label, just dropdown) -->
-            <select id="calculator" onchange="showCalculator()">
-                <option value="position">Position Size Calculator</option>
-                <option value="riskReward">Risk-to-Reward Ratio Calculator</option>
-                <option value="stopLoss">Stop Loss/Take Profit Calculator</option>
-                <option value="pipValue">Pip Value Calculator</option>
-                <option value="margin">Margin Calculator</option>
-            </select>
-        </div>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to tm24.space</h1>
+        <p>Your hub for trading knowledge, community, and collaboration.</p>
+        <button onclick="window.location.href='#login'">Join Now</button>
+    </header>
 
-        <!-- Position Size Calculator -->
-        <div id="position" class="calculator">
-            <h2>Position Size Calculator</h2>
-            <input type="number" id="accountBalance" placeholder="Account Balance" />
-            <input type="number" id="riskPercentage" placeholder="Risk Percentage" />
-            <input type="number" id="stopLossPips" placeholder="Stop Loss (Pips)" />
-            <input type="number" id="pipValue" placeholder="Pip Value (in USD)" />
-            <button onclick="calculatePositionSize()">Calculate</button>
-            <p id="positionSizeResult"></p>
-        </div>
+    <!-- Introduction Section -->
+    <main>
+        <section class="intro">
+            <h2>Why Join tm24.space?</h2>
+            <p>We bring traders, learners, and experts together to exchange ideas, grow, and learn the art of trading.</p>
+        </section>
 
-        <!-- Risk-to-Reward Ratio Calculator -->
-        <div id="riskReward" class="calculator">
-            <h2>Risk-to-Reward Ratio Calculator</h2>
-            <input type="number" id="riskAmount" placeholder="Risk Amount (in USD)" />
-            <input type="number" id="rewardAmount" placeholder="Reward Amount (in USD)" />
-            <button onclick="calculateRiskReward()">Calculate</button>
-            <p id="riskRewardResult"></p>
-        </div>
+        <!-- Core Features -->
+        <section class="features">
+            <h3>Core Features</h3>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h4>User Authentication</h4>
+                    <p>Create an account to access exclusive content, discussions, and resources.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Forum & Discussions</h4>
+                    <p>Join vibrant discussions on various trading topics with experts and enthusiasts.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Event Scheduling</h4>
+                    <p>Attend live trade meets, webinars, and workshops with industry leaders.</p>
+                </div>
+            </div>
+        </section>
 
-        <!-- Stop Loss/Take Profit Calculator -->
-        <div id="stopLoss" class="calculator">
-            <h2>Stop Loss/Take Profit Calculator</h2>
-            <input type="number" id="entryPrice" placeholder="Entry Price" />
-            <input type="number" id="stopLossPrice" placeholder="Stop Loss Price" />
-            <input type="number" id="takeProfitPrice" placeholder="Take Profit Price" />
-            <button onclick="calculateStopLossTakeProfit()">Calculate</button>
-            <p id="stopLossTakeProfitResult"></p>
-        </div>
+        <!-- Courses Section -->
+        <section class="courses">
+            <h3>Online Trading Courses</h3>
+            <p>Learn the fundamentals and advanced techniques from professional traders. Our courses cover a range of trading topics.</p>
+            <button onclick="window.location.href='#courses'">Explore Courses</button>
+        </section>
 
-        <!-- Pip Value Calculator -->
-        <div id="pipValue" class="calculator">
-            <h2>Pip Value Calculator</h2>
-            <input type="number" id="currencyPairPrice" placeholder="Currency Pair Price (e.g., 1.1500)" />
-            <input type="number" id="positionSize" placeholder="Position Size" />
-            <button onclick="calculatePipValue()">Calculate</button>
-            <p id="pipValueResult"></p>
-        </div>
+        <!-- Forex Calculator Section -->
+        <section class="calculators">
+            <h3>Forex All-in-One Calculator</h3>
+            <div class="calculator-selector">
+                <select id="calculator" onchange="showCalculator()">
+                    <option value="position">Position Size Calculator</option>
+                    <option value="riskReward">Risk-to-Reward Ratio Calculator</option>
+                    <option value="stopLoss">Stop Loss/Take Profit Calculator</option>
+                    <option value="pipValue">Pip Value Calculator</option>
+                    <option value="margin">Margin Calculator</option>
+                </select>
+            </div>
 
-        <!-- Margin Calculator -->
-        <div id="margin" class="calculator">
-            <h2>Margin Calculator</h2>
-            <input type="number" id="tradeSize" placeholder="Trade Size" />
-            <input type="number" id="leverage" placeholder="Leverage" />
-            <button onclick="calculateMargin()">Calculate</button>
-            <p id="marginResult"></p>
-        </div>
-		 <!-- Powered by TRADEMEET24 -->
-        <p class="powered-by">Powered by TRADEMEET24</p>
-   
-    </div>
-	
+            <!-- Position Size Calculator -->
+            <div id="position" class="calculator">
+                <h4>Position Size Calculator</h4>
+                <input type="number" id="accountBalance" placeholder="Account Balance" />
+                <input type="number" id="riskPercentage" placeholder="Risk Percentage" />
+                <input type="number" id="stopLossPips" placeholder="Stop Loss (Pips)" />
+                <input type="number" id="pipValue" placeholder="Pip Value (in USD)" />
+                <button onclick="calculatePositionSize()">Calculate</button>
+                <p id="positionSizeResult"></p>
+            </div>
 
-    <script src="New1.js"></script> <!-- Link to your JavaScript file -->
+            <!-- Risk-to-Reward Ratio Calculator -->
+            <div id="riskReward" class="calculator">
+                <h4>Risk-to-Reward Ratio Calculator</h4>
+                <input type="number" id="riskAmount" placeholder="Risk Amount (in USD)" />
+                <input type="number" id="rewardAmount" placeholder="Reward Amount (in USD)" />
+                <button onclick="calculateRiskReward()">Calculate</button>
+                <p id="riskRewardResult"></p>
+            </div>
+
+            <!-- Stop Loss/Take Profit Calculator -->
+            <div id="stopLoss" class="calculator">
+                <h4>Stop Loss/Take Profit Calculator</h4>
+                <input type="number" id="entryPrice" placeholder="Entry Price" />
+                <input type="number" id="stopLossPrice" placeholder="Stop Loss Price" />
+                <input type="number" id="takeProfitPrice" placeholder="Take Profit Price" />
+                <button onclick="calculateStopLossTakeProfit()">Calculate</button>
+                <p id="stopLossTakeProfitResult"></p>
+            </div>
+
+            <!-- Pip Value Calculator -->
+            <div id="pipValue" class="calculator">
+                <h4>Pip Value Calculator</h4>
+                <input type="number" id="currencyPairPrice" placeholder="Currency Pair Price (e.g., 1.1500)" />
+                <input type="number" id="positionSize" placeholder="Position Size" />
+                <button onclick="calculatePipValue()">Calculate</button>
+                <p id="pipValueResult"></p>
+            </div>
+
+            <!-- Margin Calculator -->
+            <div id="margin" class="calculator">
+                <h4>Margin Calculator</h4>
+                <input type="number" id="tradeSize" placeholder="Trade Size" />
+                <input type="number" id="leverage" placeholder="Leverage" />
+                <button onclick="calculateMargin()">Calculate</button>
+                <p id="marginResult"></p>
+            </div>
+        </section>
+
+        <!-- Registration / Login -->
+        <section id="login" class="login">
+            <h3>Sign Up or Log In</h3>
+            <p>Already a member? <a href="#login-form">Log in here</a></p>
+            <div class="login-form" id="login-form">
+                <form action="/register" method="POST">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p>Or <a href="#login-form">Log in</a></p>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 tm24.space - All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#">X</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </footer>
+    </main>
 </body>
+
 </html>
