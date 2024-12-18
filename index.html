@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>tm24 Trading Community</title>
   <link rel="stylesheet" href="New1.css" />
-  <script defer src="New1.js"></script>
+  <title>Trademeet24 - Trading Community</title>
 </head>
-
 <body>
   <!-- Header Section -->
   <header>
-    <div class="logo">tm24.space</div>
+    <div class="logo">TM24</div>
     <nav>
-      <a href="#" onclick="navigateTo('home')">Home</a>
-      <a href="#" onclick="navigateTo('community')">Community</a>
-      <a href="#" onclick="navigateTo('tools')">Tools</a>
-      <a href="#" onclick="navigateTo('profile')">Profile</a>
+      <button onclick="showCalculatorView('position')">Position Size Calculator</button>
+      <button onclick="showCalculatorView('riskReward')">Risk-to-Reward Calculator</button>
+      <button onclick="showCalculatorView('stopLoss')">Stop Loss / Take Profit</button>
+      <button onclick="toggleForms()">Sign In / Register</button>
     </nav>
   </header>
 
-  <!-- Main Content Area -->
-  <main>
-    <div class="content-container">
-      <!-- Home Section -->
-      <section id="home" class="page-section active-section">
-        <h1>Welcome to tm24 Trading Community</h1>
-        <p>Exchange ideas, learn, and connect with trading enthusiasts and experts worldwide.</p>
-        <button onclick="navigateTo('tools')">Explore Trading Tools</button>
-      </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Trademeet24</h1>
+    <p>Empowering traders with innovative tools, education, and community insights.</p>
+    <button onclick="window.location.href='#premium-courses'">Explore Courses</button>
+  </section>
 
-      <!-- Community Section -->
-      <section id="community" class="page-section">
-        <h1>Community Forum</h1>
-        <p>Engage with other traders in vibrant discussions and share your insights.</p>
-        <button onclick="navigateTo('community')">Enter Forum</button>
-      </section>
-
-      <!-- Tools Section -->
-      <section id="tools" class="page-section">
-        <h1>Trading Tools</h1>
-        <div class="tools-container">
-          <button onclick="showCalculator()">Position Size Calculator</button>
-          <button onclick="showCalculator()">Risk-to-Reward Calculator</button>
-          <button onclick="showCalculator()">Stop Loss & Take Profit</button>
-        </div>
-      </section>
-
-      <!-- Profile Section -->
-      <section id="profile" class="page-section">
-        <h1>Your Profile</h1>
-        <p>Manage your personal settings and trading insights here.</p>
-        <button onclick="alert('Manage Profile Section Coming Soon!')">Open Profile Settings</button>
-      </section>
+  <!-- Learn with Us Section -->
+  <section id="premium-courses">
+    <h2>Learn with Us: Forex Courses & Certification</h2>
+    <div class="course">
+      <p>Free Intro to Forex Trading - Explore the Basics</p>
+      <button onclick="window.location.href='#signup'">Start Learning</button>
     </div>
-  </main>
+    <div class="course">
+      <p>Advanced Forex Strategies - Certification Program - $49</p>
+      <button onclick="window.location.href='#signup'">Enroll Now</button>
+    </div>
+  </section>
 
-  <!-- Footer Section -->
+  <!-- Trading Workshops Section -->
+  <section id="trading-workshops">
+    <h2>Trading Workshops & Consultations</h2>
+    <p>Book a 1-on-1 workshop with our expert mentors. Learn strategies directly from professionals.</p>
+    <button onclick="window.location.href='#signup'">Book a Workshop Now</button>
+  </section>
+
+  <!-- Premium Membership Section -->
+  <section id="membership">
+    <h2>Premium Membership Subscription</h2>
+    <p>Access advanced tools, market insights, calculators, and trading strategies exclusive to members.</p>
+    <button onclick="window.location.href='#signup'">Join Now - $9.99/month</button>
+  </section>
+
+  <!-- Merchandise Store Section -->
+  <section id="merchandise">
+    <h2>Merchandise & Trading Tools Store</h2>
+    <div class="store-item">
+      <div>Trading Strategy Guide - $15</div>
+      <button onclick="window.location.href='#signup'">Buy Now</button>
+    </div>
+    <div class="store-item">
+      <div>Custom Forex Calculators - $25</div>
+      <button onclick="window.location.href='#signup'">Buy Now</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2023 tm24 Trading Community. All Rights Reserved.</p>
+    <p>&copy; 2024 Trademeet24. All Rights Reserved.</p>
   </footer>
-</body>
 
-</html>
+  <script src="New1.js"></script>
+</body>
+  </html>
