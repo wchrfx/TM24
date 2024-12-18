@@ -1,274 +1,110 @@
-/* Root color scheme */
+/* Root Variables */
 :root {
-    --primary-color: #1E90FF; /* Blue */
-    --secondary-color: #4CAF50; /* Green */
-    --background-color: #f4f4f4; /* Light gray */
-    --accent-color: #333; /* Dark text */
-    --highlight-color: #ff6600; /* Accent color for highlights */
+  --background-color: #ffffff;
+  --text-color: #121212;
+  --accent-color: #4caf50;
+  --button-bg: #4caf50;
+  --button-text: #ffffff;
 }
 
-/* Body and basic styles */
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #76c893;
+    --button-bg: #333333;
+    --button-text: #e0e0e0;
+  }
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--accent-color);
-    margin: 0;
-    padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header */
+/* Header Styling */
 header {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+  background-color: var(--accent-color);
+  color: var(--button-text);
+  padding: 1rem;
+  text-align: center;
 }
 
-header h1 {
-    font-size: 48px;
-    margin: 0;
+header nav a {
+  color: var(--button-text);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
 }
 
-header p {
-    font-size: 24px;
-    margin-top: 10px;
+header nav a:hover {
+  text-decoration: underline;
 }
 
-button {
-    background-color: var(--secondary-color);
-    color: white;
-    font-size: 18px;
-    padding: 12px 30px;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 4px;
-}
-
-/* Main Content */
+/* Content Styling */
 main {
-    padding: 40px 20px;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Introduction Section */
-.intro {
-    text-align: center;
-    margin-bottom: 40px;
+main h1, main h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
 
-.intro h2 {
-    font-size: 36px;
-    color: var(--primary-color);
+main p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-/* Features Section */
-.features {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* Buttons */
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.features h3 {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 30px;
+button:hover {
+  background-color: var(--accent-color);
 }
 
-.feature-cards {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.feature-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-}
-
-.feature-card h4 {
-    font-size: 24px;
-    color: var(--primary-color);
-}
-
-.feature-card p {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-/* Courses Section */
-.courses {
-    background-color: #fff;
-    padding: 40px;
-    margin-top: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.courses h3 {
-    font-size: 32px;
-    color: var(--primary-color);
-}
-
-.courses p {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-/* Login Form */
-.login {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.login h3 {
-    font-size: 28px;
-    color: var(--primary-color);
-}
-
-.login-form {
-    display: inline-block;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-button[type="submit"] {
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 12px;
-    width: 100%;
-    font-size: 18px;
-    border-radius: 4px;
-}
-
-/* Footer */
+/* Footer Styling */
 footer {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+  background-color: var(--accent-color);
+  color: var(--button-text);
+  text-align: center;
+  padding: 1rem;
 }
 
-footer p {
-    margin: 0;
-}
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-.social-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
+  main h1, main h2 {
+    font-size: 2rem;
+  }
 
-.social-links li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Forex Calculator Section */
-.calculators {
-    background-color: #fff;
-    padding: 40px;
-    margin-top: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.calculators h3 {
-    font-size: 32px;
-    color: var(--primary-color);
-    text-align: center;
-}
-
-/* Calculator Dropdown */
-.calculator-selector {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-#calculator {
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
-/* Individual Calculator Styles */
-.calculator {
-    display: none;
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.calculator h4 {
-    font-size: 28px;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.calculator input,
-.calculator button {
-    display: block;
+  button {
     width: 100%;
-    margin: 10px 0;
-    padding: 12px;
-    font-size: 16px;
-}
-
-.calculator input {
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
-.calculator button {
-    background-color: var(--secondary-color);
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 18px;
-}
-
-.calculator button:hover {
-    background-color: #388E3C;
-}
-
-.calculator p {
-    font-size: 16px;
-    color: var(--accent-color);
-    text-align: center;
-}
-
-/* Footer for Calculator */
-.calculators p {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
-    color: var(--accent-color);
-}
+  }
+    }
