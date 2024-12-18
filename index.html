@@ -2,104 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>tm24.space - Trading Community</title>
-    <link rel="stylesheet" href="New1.css">
-    <script src="New1.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tm24 Trading Community</title>
+  <link rel="stylesheet" href="New1.css" />
+  <script defer src="New1.js"></script>
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to tm24.space</h1>
-        <p>Your hub for trading knowledge, community, and collaboration.</p>
-        <button onclick="window.location.href='#login'">Join Now</button>
-    </header>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">tm24.space</div>
+    <nav>
+      <a href="#" onclick="navigateTo('home')">Home</a>
+      <a href="#" onclick="navigateTo('community')">Community</a>
+      <a href="#" onclick="navigateTo('tools')">Tools</a>
+      <a href="#" onclick="navigateTo('profile')">Profile</a>
+    </nav>
+  </header>
 
-    <!-- Main Section -->
-    <main>
-        <!-- Introduction Section -->
-        <section class="intro">
-            <h2>Why Join tm24.space?</h2>
-            <p>We bring traders, learners, and experts together to exchange ideas, grow, and learn the art of trading.</p>
-        </section>
+  <!-- Main Content Area -->
+  <main>
+    <div class="content-container">
+      <!-- Home Section -->
+      <section id="home" class="page-section active-section">
+        <h1>Welcome to tm24 Trading Community</h1>
+        <p>Exchange ideas, learn, and connect with trading enthusiasts and experts worldwide.</p>
+        <button onclick="navigateTo('tools')">Explore Trading Tools</button>
+      </section>
 
-        <!-- Core Features Section -->
-        <section class="features">
-            <h3>Core Features</h3>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <h4>User Authentication</h4>
-                    <p>Create an account to access exclusive content, discussions, and resources.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Forum & Discussions</h4>
-                    <p>Join vibrant discussions on various trading topics with experts and enthusiasts.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Event Scheduling</h4>
-                    <p>Attend live trade meets, webinars, and workshops with industry leaders.</p>
-                </div>
-            </div>
-        </section>
+      <!-- Community Section -->
+      <section id="community" class="page-section">
+        <h1>Community Forum</h1>
+        <p>Engage with other traders in vibrant discussions and share your insights.</p>
+        <button onclick="navigateTo('community')">Enter Forum</button>
+      </section>
 
-        <!-- Courses Section -->
-        <section class="courses">
-            <h3>Online Trading Courses</h3>
-            <p>Learn the fundamentals and advanced techniques from professional traders. Our courses cover a range of trading topics.</p>
-            <button onclick="window.location.href='#courses'">Explore Courses</button>
-        </section>
+      <!-- Tools Section -->
+      <section id="tools" class="page-section">
+        <h1>Trading Tools</h1>
+        <div class="tools-container">
+          <button onclick="showCalculator()">Position Size Calculator</button>
+          <button onclick="showCalculator()">Risk-to-Reward Calculator</button>
+          <button onclick="showCalculator()">Stop Loss & Take Profit</button>
+        </div>
+      </section>
 
-        <!-- Calculators Section -->
-        <section class="calculators">
-            <h3>Forex All-in-One Calculator</h3>
-            <div class="calculator-selector">
-                <select id="calculator" onchange="showCalculator()">
-                    <option value="position">Position Size Calculator</option>
-                    <option value="riskReward">Risk-to-Reward Ratio Calculator</option>
-                    <option value="stopLoss">Stop Loss/Take Profit Calculator</option>
-                    <option value="pipValue">Pip Value Calculator</option>
-                    <option value="margin">Margin Calculator</option>
-                </select>
-            </div>
+      <!-- Profile Section -->
+      <section id="profile" class="page-section">
+        <h1>Your Profile</h1>
+        <p>Manage your personal settings and trading insights here.</p>
+        <button onclick="alert('Manage Profile Section Coming Soon!')">Open Profile Settings</button>
+      </section>
+    </div>
+  </main>
 
-            <div id="position" class="calculator">
-                <h4>Position Size Calculator</h4>
-                <input type="number" id="accountBalance" placeholder="Account Balance" />
-                <input type="number" id="riskPercentage" placeholder="Risk Percentage" />
-                <input type="number" id="stopLossPips" placeholder="Stop Loss (Pips)" />
-                <input type="number" id="pipValue" placeholder="Pip Value (in USD)" />
-                <button onclick="calculatePositionSize()">Calculate</button>
-                <p id="positionSizeResult"></p>
-            </div>
-        </section>
-
-        <!-- Registration Section -->
-        <section id="login" class="login">
-            <h3>Sign Up or Log In</h3>
-            <div id="login-form">
-                <form action="/register" method="POST">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                    <button type="submit">Sign Up</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 tm24.space - All rights reserved.</p>
-        <ul class="social-links">
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
-    </footer>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2023 tm24 Trading Community. All Rights Reserved.</p>
+  </footer>
 </body>
 
 </html>
