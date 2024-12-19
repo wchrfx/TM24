@@ -1,75 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="New1.css" />
-  <title>Trademeet24 - Trading Community</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TM24 - Trading Community</title>
+    <link rel="stylesheet" href="New1.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="logo">TM24</div>
-    <nav>
-      <button onclick="showCalculatorView('position')">Position Size Calculator</button>
-      <button onclick="showCalculatorView('riskReward')">Risk-to-Reward Calculator</button>
-      <button onclick="showCalculatorView('stopLoss')">Stop Loss / Take Profit</button>
-      <button onclick="toggleForms()">Sign In / Register</button>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <h1>TM24</h1>
+            <nav>
+                <a href="#position-calculator">Position Size Calculator</a>
+                <a href="#risk-reward">Risk-to-Reward Calculator</a>
+                <a href="#stop-loss">Stop Loss / Take Profit</a>
+                <a href="#" id="sign-in-btn">Sign In / Register</a>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Trademeet24</h1>
-    <p>Empowering traders with innovative tools, education, and community insights.</p>
-    <button onclick="window.location.href='#premium-courses'">Explore Courses</button>
-  </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>Welcome to Trademeet24</h2>
+                <p>Empowering traders with innovative tools, education, and community insights.</p>
+                <button class="primary-btn">Explore Courses</button>
+            </div>
+        </section>
 
-  <!-- Learn with Us Section -->
-  <section id="premium-courses">
-    <h2>Learn with Us: Forex Courses & Certification</h2>
-    <div class="course">
-      <p>Free Intro to Forex Trading - Explore the Basics</p>
-      <button onclick="window.location.href='#signup'">Start Learning</button>
-    </div>
-    <div class="course">
-      <p>Advanced Forex Strategies - Certification Program - $49</p>
-      <button onclick="window.location.href='#signup'">Enroll Now</button>
-    </div>
-  </section>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <h3>Learn with Us: Forex Courses & Certification</h3>
+                    <p>Free Intro to Forex Trading - Explore the Basics</p>
+                    <button class="secondary-btn">Start Learning</button>
+                    <p>Advanced Forex Strategies - Certification Program - $49</p>
+                    <button class="secondary-btn">Enroll Now</button>
+                </div>
 
-  <!-- Trading Workshops Section -->
-  <section id="trading-workshops">
-    <h2>Trading Workshops & Consultations</h2>
-    <p>Book a 1-on-1 workshop with our expert mentors. Learn strategies directly from professionals.</p>
-    <button onclick="window.location.href='#signup'">Book a Workshop Now</button>
-  </section>
+                <div class="feature">
+                    <h3>Trading Workshops & Consultations</h3>
+                    <p>Book a 1-on-1 workshop with our expert mentors. Learn strategies directly from professionals.</p>
+                    <button class="secondary-btn">Book a Workshop Now</button>
+                </div>
 
-  <!-- Premium Membership Section -->
-  <section id="membership">
-    <h2>Premium Membership Subscription</h2>
-    <p>Access advanced tools, market insights, calculators, and trading strategies exclusive to members.</p>
-    <button onclick="window.location.href='#signup'">Join Now - $9.99/month</button>
-  </section>
+                <div class="feature">
+                    <h3>Premium Membership Subscription</h3>
+                    <p>Access advanced tools, market insights, calculators, and trading strategies exclusive to members.</p>
+                    <button class="secondary-btn">Join Now - $9.99/month</button>
+                </div>
 
-  <!-- Merchandise Store Section -->
-  <section id="merchandise">
-    <h2>Merchandise & Trading Tools Store</h2>
-    <div class="store-item">
-      <div>Trading Strategy Guide - $15</div>
-      <button onclick="window.location.href='#signup'">Buy Now</button>
-    </div>
-    <div class="store-item">
-      <div>Custom Forex Calculators - $25</div>
-      <button onclick="window.location.href='#signup'">Buy Now</button>
-    </div>
-  </section>
+                <div class="feature">
+                    <h3>Merchandise & Trading Tools Store</h3>
+                    <p>Trading Strategy Guide - $15</p>
+                    <button class="secondary-btn">Buy Now</button>
+                    <p>Custom Forex Calculators - $25</p>
+                    <button class="secondary-btn">Buy Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Trademeet24. All Rights Reserved.</p>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trademeet24. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-  <script src="New1.js"></script>
+    <script src="New1.js"></script>
 </body>
-  </html>
+</html>
