@@ -1,97 +1,80 @@
-/* Root Variables for Colors */
 :root {
   --background-color: #121212;
   --text-color: #e0e0e0;
-  --accent-color: #00bcd4;
-  --secondary-accent: #76c893;
-  --button-bg: #333333;
-}
-
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --accent-color: #4caf50;
+  --button-bg: #4caf50;
+  --button-text: #ffffff;
 }
 
 body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
+  line-height: 1.6;
 }
 
-/* Header Section */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--accent-color);
-  color: white;
-}
-
-header .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-header nav button {
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--button-bg);
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-header nav button:hover {
-  background: var(--secondary-accent);
-}
-
-/* Hero Section */
-.hero {
+  background-color: #222222;
+  padding: 1rem 0;
   text-align: center;
-  padding: 3rem 1rem;
-  background: linear-gradient(135deg, #3a3a3a, #121212);
-  color: white;
-  border-bottom: 2px solid var(--accent-color);
 }
 
-/* Courses Section */
-#premium-courses, #membership, #trading-workshops, #merchandise {
-  padding: 2rem 1rem;
+header h1 {
+  color: var(--accent-color);
+  font-size: 2rem;
+}
+
+header nav a {
+  color: var(--button-text);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h2, section h3 {
   text-align: center;
-  background: #333333;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.card {
+  background-color: #333333;
+  padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
-  margin: 1rem 0;
-}
-
-.course,
-.store-item {
-  margin: 1rem 0;
+  margin: 1rem auto;
+  max-width: 500px;
+  text-align: center;
 }
 
 button {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 0.6rem 1.2rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   border: none;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  margin-top: 1rem;
 }
 
 button:hover {
-  background-color: var(--secondary-accent);
+  background-color: var(--accent-color);
 }
 
 footer {
   text-align: center;
-  padding: 1rem 0;
-  background-color: var(--accent-color);
-  color: white;
-  font-size: 0.9rem;
-  }
+  padding: 1rem;
+  background-color: #222222;
+  color: var(--text-color);
+}
